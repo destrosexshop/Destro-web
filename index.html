@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destro SexShop | Catálogo Interactivo GDL</title>
+    <style>
+        :root { --primary: #d90429; --dark: #000000; --gray: #161a1d; --text: #f5f3f4; --whatsapp: #25d366; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--dark); color: var(--text); margin: 0; padding-bottom: 100px; }
+        
+        .top-bar { background: var(--primary); color: white; text-align: center; padding: 12px; font-weight: bold; position: sticky; top: 0; z-index: 1000; font-size: 0.85rem; }
+
+        header { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518196775741-2522c00288f3?q=80&w=1200'); background-size: cover; padding: 60px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        .logo { font-size: 3.5rem; font-weight: 900; color: var(--primary); letter-spacing: 8px; margin: 0; }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        
+        /* Info de Pagos */
+        .payment-box { background: #1a1a1a; border: 1px solid #333; border-radius: 15px; padding: 20px; margin-bottom: 40px; }
+        .payment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; }
+        .pay-tag { background: #2a2a2a; padding: 8px; border-radius: 5px; font-size: 0.8rem; text-align: center; border: 1px solid var(--primary); }
+
+        /* Grid de Productos */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: var(--gray); border-radius: 15px; overflow: hidden; border: 1px solid #333; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .info { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
+        .price { font-size: 1.8rem; color: var(--primary); font-weight: bold; margin: 5px 0 15px 0; }
+        
+        /* Botones Individuales */
+        .btn-buy { background: var(--whatsapp); color: white; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: 0.3s; }
+        .btn-buy:active { transform: scale(0.95); background: #128c7e; }
+
+        /* Botón Flotante General */
+        .ws-float { position: fixed; bottom: 25px; right: 25px; background: var(--whatsapp); width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); z-index: 2000; }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">🚚 ENTREGAS DISCRETAS HOY EN GUADALAJARA</div>
+
+    <header>
+        <h1 class="logo">DESTRO</h1>
+        <p>"Estoy aquí para ayudarte, no para juzgarte"</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="payment-box">
+            <h4 style="margin:0; color: var(--primary);">💳 MÉTODOS DE PAGO DISPONIBLES:</h4>
+            <div class="payment-grid">
+                <div class="pay-tag">💵 Efectivo</div>
+                <div class="pay-tag">💳 Crédito / Débito</div>
+                <div class="pay-tag">🎟️ Vales de Despensa</div>
+                <div class="pay-tag">🏦 Transferencia</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516589174184-c68526514800?q=80&w=400" alt="Seducción Prohibida">
+                <div class="info">
+                    <h3>Pack Seducción Prohibida</h3>
+                    <div class="price">$750 MXN</div>
+                    <a href="https://wa.me/523329439391?text=Hola Destro, me interesa el *Pack Seducción Prohibida ($750)*. ¿Tienes disponible para entrega hoy?" class="btn-buy">
+                        Me interesa este artículo
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1614088685112-0a760b71a3c8?q=80&w=400" alt="Golden Éxtasis">
+                <div class="info">
+                    <h3>Golden Éxtasis (4 en 1)</h3>
+                    <div class="price">$550 MXN</div>
+                    <a href="https://wa.me/523329439391?text=Hola Destro, me interesa el *Pack Golden Éxtasis ($550)*. ¿Tienes disponible para entrega hoy?" class="btn-buy">
+                        Me interesa este artículo
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602931066318-4462e5935631?q=80&w=400" alt="Diamond Vacuum">
+                <div class="info">
+                    <h3>Diamond Vacuum</h3>
+                    <div class="price">$890 MXN</div>
+                    <a href="https://wa.me/523329439391?text=Hola Destro, me interesa el *Diamond Vacuum ($890)*. ¿Tienes disponible para entrega hoy?" class="btn-buy">
+                        Me interesa este artículo
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1559599189-fe84dea4eb72?q=80&w=400" alt="Lluvia de Placer">
+                <div class="info">
+                    <h3>Pack Lluvia de Placer</h3>
+                    <div class="price">$620 MXN</div>
+                    <a href="https://wa.me/523329439391?text=Hola Destro, me interesa el *Pack Lluvia de Placer ($620)*. ¿Tienes disponible para entrega hoy?" class="btn-buy">
+                        Me interesa este artículo
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=400" alt="Master Grip">
+                <div class="info">
+                    <h3>Master-Grip: Éxtasis</h3>
+                    <div class="price">$450 MXN</div>
+                    <a href="https://wa.me/523329439391?text=Hola Destro, me interesa el *Master-Grip: Éxtasis ($450)*. ¿Tienes disponible para entrega hoy?" class="btn-buy">
+                        Me interesa este artículo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="https://wa.me/523329439391?text=Hola Destro! Necesito asesoría discreta sobre los productos..." class="ws-float">
+        <svg width="35" height="35" fill="white" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+        </svg>
+    </a>
+
+    <footer>
+        <p>© 2026 DESTRO SEX SHOP | Guadalajara, Jal.<br>Aceptamos Efectivo, Tarjetas, Vales y Transferencias.</p>
+    </footer>
+
+</body>
+</html>
